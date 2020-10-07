@@ -1,12 +1,12 @@
-# To start front app, run
+## To start front app, run
 
-## `cd app`
-## `yarn` 
-## `yarn start`
+#### `cd app`
+#### `yarn` 
+#### `yarn start`
 
 
-# To start server, run
+## To start server, run
 
-## `cd server`
-## `yarn` 
-## `yarn start`
+#### `cd server`
+#### `yarn` 
+#### `yarn start`
