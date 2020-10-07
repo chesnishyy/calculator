@@ -11,7 +11,6 @@ describe('POST /calculate', () => {
 
     beforeEach(async () => {
         server = await init();
-        console.log(server)
     });
 
     afterEach(async () => {
@@ -47,6 +46,4 @@ describe('POST /calculate', () => {
         
         expect(res.result.data).to.equal('15');
     });
-
-    
 });
