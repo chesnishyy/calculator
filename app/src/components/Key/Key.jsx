@@ -8,16 +8,12 @@ import { keyMode } from '../../utils/constants';
 
 import { onKeyClick } from '../../actions';
 
-// import reducer, { initialState } from '../../reducer';
-
 const cx = classnames.bind(theme);
 
 const Key = props => {
-    const { value, mode, name, wide } = props;
+    const { value, mode, wide } = props;
 
     const dispatch = useDispatch();
-    // const [state, dispatch] = useReducer(reducer, initialState);
-
 
     const handleButtonCLick = () => {
         dispatch(onKeyClick(props));

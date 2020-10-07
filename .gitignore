@@ -2,5 +2,14 @@
 
 */node_modules
 
-server/dist
+# app
 app/build
+app/yarn.lock
+app/yarn-error.log
+
+
+# server
+server/dist
+server/yarn.lock
+server/package-lock.json
+server/yarn-error.log

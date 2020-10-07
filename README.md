@@ -1,3 +1,12 @@
-# To run front app and server run
+# To start front app, run
 
-## docker-compose up -d --build
+## `cd app`
+## `yarn` 
+## `yarn start`
+
+
+# To start server, run
+
+## `cd server`
+## `yarn` 
+## `yarn start`

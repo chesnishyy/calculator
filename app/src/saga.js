@@ -72,7 +72,7 @@ function* handleOperatorKey(value) {
 }
 
 function* basicOperatorsHandler(value) {
-    const { firstValue, secondValue, displayValue, operator, lastKey } = yield select(dataSelector);
+    const { firstValue, displayValue, lastKey } = yield select(dataSelector);
 
     if (firstValue) {
         yield put(setOperator(value));
@@ -115,7 +115,7 @@ function* signHandler(value) {
 }
 
 function* equalHandler() {
-    const { displayValue, firstValue, secondValue, operator } = yield select(dataSelector);
+    const { displayValue, firstValue, operator } = yield select(dataSelector);
 
     if (!firstValue || !operator) return;
 
