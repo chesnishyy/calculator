@@ -1,0 +1,35 @@
+version: "3.8"
+services:
+  calc_server:
+    container_name: calc_server
+    build: ./server
+    env_file:
+      - ./server/.env
+    # environment:
+    #   - API_PORT=${API_PORT}
+    #   - API_HOST=${API_HOST}
+    ports:
+      - 8080:8080
+    volumes:
+      - ./server/src:/server/src
+
+  calc_app:
+    container_name: calc_app
+    build: ./app
+    env_file:
+      - ./app/.env
+    environment:
+      - CI=true
+      # - REACT_APP_PORT=$REACT_APP_PORT
+      # - REACT_APP_API_HOST=$REACT_APP_API_HOST
+      # - REACT_APP_API_PORT=$REACT_APP_API_PORT
+    ports:
+      - 3000:3000
+    volumes:
+      - ./app/src:/app/src
+      - ./app/public:/app/public
+      - /app/node_modules
+    links:
+      - calc_server
+    depends_on:
+      - calc_server

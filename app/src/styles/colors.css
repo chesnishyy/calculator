@@ -1,0 +1,9 @@
+:root {
+    --digit-key-color: #7E7E7F;
+    --func-key-color: #646566;
+    --operator-key-color: #FF9E10;
+    --wide-key-width: 160px;
+    --black: #000;
+    --key-border: #545556;
+    --active-key: #D3D2D4;
+}
